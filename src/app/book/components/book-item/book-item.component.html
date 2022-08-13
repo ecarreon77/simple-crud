@@ -1,0 +1,22 @@
+
+<br>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th colspan="2">Authors</th>
+      <th>ISBN</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <td>{{bookItem?.id}}</td>
+      <td>{{bookItem?.name}}</td>
+      <td *ngFor="let author of bookItem?.authors">{{author }}</td>
+      <td>{{bookItem?.isbn}}</td>
+      <td>
+        <button (click)="edit()">EDIT</button>
+        <button (click)="delete()">DELETE</button>
+      </td>
+    </tr>
+    </table>
+

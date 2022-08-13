@@ -1,0 +1,4 @@
+
+<div *ngFor="let blog of blogs">
+    <app-blog-item [blogItem]="blog" (actionEmitter)="executeAction($event)" class="app-blog"></app-blog-item>
+</div>
