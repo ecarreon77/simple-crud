@@ -1,10 +1,42 @@
-table, th, td {
-    border: 1px solid black;
-  }
-  button {
-    color: white;
-    background-color: green;
-  }
-  button:hover {
-    color: blue;
-  }
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background:#fff;
+}
+.button {
+  display: inline-block;
+  padding: 8px 13px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.example-card {
+  width: 400px;
+  height: 250px;
+  text-align: center;
+}
+
+.mat-card-crv {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 5px;
+}

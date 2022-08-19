@@ -15,7 +15,11 @@ export class BookListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  executeAction(book:Book) {
-    console.log(book.id)
-  }
+  executeEdit(book:Book) {
+      console.log(book.id);
+    }
+  
+    executeDelete(book:Book) {
+      console.log(book.id);
+    }
 }

@@ -1,22 +1,17 @@
-
-<br>
-<table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th colspan="2">Authors</th>
-      <th>ISBN</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td>{{bookItem?.id}}</td>
-      <td>{{bookItem?.name}}</td>
-      <td *ngFor="let author of bookItem?.authors">{{author }}</td>
-      <td>{{bookItem?.isbn}}</td>
-      <td>
-        <button (click)="edit()">EDIT</button>
-        <button (click)="delete()">DELETE</button>
-      </td>
-    </tr>
-    </table>
-
+    <br>
+    <div class="mat-card-crv">
+      <mat-card class="example-card" layout="row" layout-align="center center">
+        <img mat-card-sm-image src="https://th.bing.com/th/id/R.9650ca99c803f7cab9cf0677287d7d91?rik=sKxL0bKNiwMBQQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fBook-HD-Wallpapers-download.jpeg&ehk=MifFVbxVMTDTdMfXAq%2baR1n9ibYdVtU2JJf%2bP50ACvk%3d&risl=&pid=ImgRaw&r=0" >
+        <mat-card-title>{{bookItem?.name}}</mat-card-title>
+        <mat-card-subtitle>Author: {{bookItem?.authors}}</mat-card-subtitle>
+        <mat-card-content>ISBN: {{bookItem?.isbn}}</mat-card-content>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+          <button [routerLink]="['form']" class="button" mat-button>EDIT</button>
+          <button (click)="delete()" class="button" mat-button>DELETE</button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card><br>
+      </div>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Blog } from '../models/blog';
 
@@ -6,13 +7,13 @@ import { Blog } from '../models/blog';
 })
 export class BlogServiceService {
 
-  constructor() { }
-  blog: Blog[] = [
+  constructor(private http: HttpClient) { }
+  blogs: Blog[] = [
     {
       id: 1,
-      title: "Alison Kent blog",
-      description: "Blog Description",
-      author: "Alison Kent",
+      title: "Fear of a Black Nation",
+      description: "Race, Sex, and Security in Sixties Montreal",
+      author: "David Austin",
       comments: [
         "Nice blog",
         "Very nice blog"
@@ -20,9 +21,9 @@ export class BlogServiceService {
     },
     {
       id: 2,
-      title: "Between the Lines",
-      description: "Blog Description",
-      author: "David Allen",
+      title: "Disarm, Defund, Dismantle",
+      description: "Police Abolition in Canada",
+      author: "Shiri Pasternak",
       comments: [
         "Good Blog",
         "Very good blog"
@@ -31,6 +32,6 @@ export class BlogServiceService {
   ]
 
   getBlog = () => {
-    return this.blog;
+    return this.blogs;
   }
 }

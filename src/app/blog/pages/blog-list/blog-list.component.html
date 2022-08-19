@@ -1,4 +1,5 @@
-
+<app-command-bar></app-command-bar>
 <div *ngFor="let blog of blogs">
-    <app-blog-item [blogItem]="blog" (actionEmitter)="executeAction($event)" class="app-blog"></app-blog-item>
+    <app-blog-item [blogItem]="blog" (editEmitter) = "executeEdit($event)"
+    (deleteEmitter) = "executeDelete($event)"> class="app-blog"></app-blog-item>
 </div>

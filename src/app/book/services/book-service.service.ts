@@ -7,38 +7,35 @@ import { Book } from '../models/book';
 export class BookServiceService {
 
   constructor() { }
-  book: Book[] = [
+  books: Book[] = [
     {
       id: 1,
       name: "Animal Farm",
       authors: [
-        "George Orwell",
-        "Edrick"
+        "George Orwell"
       ],
-      isbn: 111
+      isbn: 9780451526342
 
     },
     {
       id: 2,
       name: "Arms and the Man",
       authors: [
-        "G.B.Shaw",
-        "Chua"
+        "G.B.Shaw"
       ],
-      isbn: 222
+      isbn: 9781494863067
 
     },
     {
       id: 3,
       name: "Ben Hur",
       authors: [
-        "Lewis Wallace",
-        "Carreon"
+        "Lewis Wallace"
       ],
-      isbn: 333
+      isbn: 9780192831996
     }
   ];
   getBooks = () => {
-    return this.book;
+    return this.books;
   }
 }

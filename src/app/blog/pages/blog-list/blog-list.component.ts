@@ -11,12 +11,15 @@ import { BlogServiceService } from '../../services/blog-service.service';
 export class BlogListComponent implements OnInit {
   blogs: Blog[] = []
   constructor(private blogService: BlogServiceService) { 
-    this.blogs = blogService.getBlog();
+    this.blogs = this.blogService.getBlog();
   }
 
-  ngOnInit(): void {
-  }
-  executeAction(blog:Blog) {
-    console.log(blog.id)
-  }
+  ngOnInit(): void { }
+    executeEdit(blog:Blog) {
+      console.log(blog.id);
+    }
+  
+    executeDelete(blog:Blog) {
+      console.log(blog.id);
+    }
 }

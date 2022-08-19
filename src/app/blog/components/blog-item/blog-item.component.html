@@ -1,23 +1,19 @@
-
 <br>
-<table>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Author</th>
-      <th colspan="2">Comments</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td>{{blogItem?.id}}</td>
-      <td>{{blogItem?.title}}</td>
-      <td>{{blogItem?.description}}</td>
-      <td>{{blogItem?.author}}</td>
-      <td *ngFor="let comment of blogItem?.comments">{{comment }}</td>
-      <td>
-        <button (click)="edit()">EDIT</button>
-        <button (click)="delete()">DELETE</button>
-      </td>
-    </tr>
-    </table>
+<div class="mat-card-crv">
+<mat-card class="example-card">
+  <mat-card-title>{{blogItem?.title}}</mat-card-title>
+  <img mat-card-sm-image src="https://th.bing.com/th/id/OIP.EZdok21TLP1NJMtpP9PpZwHaDg?pid=ImgDet&w=1900&h=899&rs=1" >
+  <mat-card-subtitle>Author: {{blogItem?.author}}</mat-card-subtitle>
+  
+  <mat-card-content>{{blogItem?.description}}</mat-card-content>
+  <mat-card-content>Comments: {{blogItem?.comments}}</mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button  [routerLink]="['form']" class="button" mat-button>EDIT</button>
+    <button class="button" mat-button>DELETE</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card><br>
+</div>
