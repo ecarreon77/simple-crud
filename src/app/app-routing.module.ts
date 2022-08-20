@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: () => import('./book/book.module').then( b => b.BookModule)
   },
   {
-    path: "book/form",
+    path: "book/form/:id",
     component: BookFormComponent
   },
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: () => import('./blog/blog.module').then( m => m.BlogModule)
   },
   {
-    path: "blog/form",
+    path: "blog/form/:id",
     component: BlogFormComponent,
   },
   {

@@ -23,6 +23,9 @@ export class CommandBarComponent implements OnInit {
     this.router.navigate(navigationDetails);
   }
 
+  
+
+
 deleteAll () {
   this.deleteAllEmitter.emit();
 }

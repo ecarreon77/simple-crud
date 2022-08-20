@@ -9,7 +9,7 @@
   <mat-card-content>Comments: {{blogItem?.comments}}</mat-card-content>
   <mat-divider inset></mat-divider>
   <mat-card-actions>
-    <button  [routerLink]="['form']" class="button" mat-button>EDIT</button>
+    <button  [routerLink]="['form', blogItem?.id]" class="button" mat-button>EDIT</button>
     <button class="button" mat-button>DELETE</button>
   </mat-card-actions>
   <mat-card-footer>

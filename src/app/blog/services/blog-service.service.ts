@@ -28,10 +28,37 @@ export class BlogServiceService {
         "Good Blog",
         "Very good blog"
       ]
+    },
+    {
+      id: 3,
+      title: "Disarm, Defund, Dismantle",
+      description: "Police Abolition in Canada",
+      author: "Shiri Pasternak",
+      comments: [
+        "Good Blog",
+        "Very good blog"
+      ]
     }
   ]
 
-  getBlog = () => {
+  getBlog() {
     return this.blogs;
   }
+
+  setBlog(dt: Blog) {
+    this.blogs.push(dt)
+  }
+
+
+  editBlog(dt: Blog){
+    for(let data of this.blogs){
+      if(data.id === dt.id){
+        data.title = dt.title
+        data.description = dt.description
+        data.author = dt.author
+        data.comments = dt.comments
+      }
+    }
+  }
+  
 }

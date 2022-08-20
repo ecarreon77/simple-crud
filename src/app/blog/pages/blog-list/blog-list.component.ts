@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Blog } from '../../models/blog';
 import { BlogServiceService } from '../../services/blog-service.service';
 
@@ -9,7 +11,10 @@ import { BlogServiceService } from '../../services/blog-service.service';
   styleUrls: ['./blog-list.component.scss']
 })
 export class BlogListComponent implements OnInit {
-  blogs: Blog[] = []
+  blogId: Blog | undefined;
+  blogs: Blog[] = [];
+  updatedBlog: Subscription | undefined;
+  private router: Router | undefined;
   constructor(private blogService: BlogServiceService) { 
     this.blogs = this.blogService.getBlog();
   }
@@ -22,4 +27,5 @@ export class BlogListComponent implements OnInit {
     executeDelete(blog:Blog) {
       console.log(blog.id);
     }
+    
 }
